@@ -7,15 +7,14 @@ public class Desafio1 {
 
 	public static void main(String[] args) {
 		int[] teste = { 10, 4, 32, 34, 33, 871, 543, 3456, 654, 567, 87, 6789, 98 };
-		OrdenaValores(teste);
+		ordenaValores(teste);
 	}
 
-	public static void OrdenaValores(int[] entrada) {
+	public static void ordenaValores(int[] entrada) {
 		int linhas = entrada[0];
 		ArrayList<Integer> pares = new ArrayList<Integer>();
 		ArrayList<Integer> impares = new ArrayList<Integer>();
 		int[] saida = new int[linhas];
-		System.out.println(Arrays.toString(entrada));
 
 		for (int i = 1; i <= linhas; i++) {
 			if (entrada[i] % 2 == 0) {
@@ -25,8 +24,8 @@ public class Desafio1 {
 			}
 		}
 
-		pares = OrdenaPares(pares);
-		impares = OrdenaImpares(impares);
+		pares = ordenaPares(pares);
+		impares = ordenaImpares(impares);
 
 		for (int i = 0; i < saida.length; i++) {
 			if (pares.size() > 0) {
@@ -40,7 +39,7 @@ public class Desafio1 {
 		System.out.println(Arrays.toString(saida));
 	}
 
-	public static ArrayList<Integer> OrdenaPares(ArrayList<Integer> pares) {
+	public static ArrayList<Integer> ordenaPares(ArrayList<Integer> pares) {
 		System.out.println(pares);
 		for (int i = pares.size() - 1; i > 1; i--) {
 			for (int j = 0; j < pares.size(); j++) {
@@ -53,13 +52,11 @@ public class Desafio1 {
 				}
 			}
 		}
-		System.out.println(pares);
 		return pares;
 
 	}
 
-	public static ArrayList<Integer> OrdenaImpares(ArrayList<Integer> impares) {
-		System.out.println(impares);
+	public static ArrayList<Integer> ordenaImpares(ArrayList<Integer> impares) {
 		for (int i = 1; i < impares.size(); i++) {
 			for (int j = 0; j < impares.size(); j++) {
 				if (impares.get(i) > impares.get(j)) {
@@ -71,7 +68,6 @@ public class Desafio1 {
 				}
 			}
 		}
-		System.out.println(impares);
 		return impares;
 
 	}
