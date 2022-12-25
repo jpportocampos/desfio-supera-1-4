@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Desafio1 {
 
 	public static void main(String[] args) {
-		int[] teste = { 10, 4, 32, 34, 33, 871, 543, 3456, 654, 567, 87, 6789, 98 };
+		int[] teste = { 12, 4, 32, 34, 33, 871, 543, 3456, 654, 567, 87, 6789, 98 };
 		ordenaValores(teste);
 	}
 
@@ -40,7 +40,6 @@ public class Desafio1 {
 	}
 
 	public static ArrayList<Integer> ordenaPares(ArrayList<Integer> pares) {
-		System.out.println(pares);
 		for (int i = pares.size() - 1; i > 1; i--) {
 			for (int j = 0; j < pares.size(); j++) {
 				if (pares.get(i) < pares.get(j)) {
